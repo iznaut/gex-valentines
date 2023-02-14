@@ -2,6 +2,23 @@ function load_image(id) {
     img = document.getElementById("card_image");
     url = "images/" + valentine_meta[id]["filename"];
     img.src = url;
+
+    if (id == 4) {
+        load_cam()
+    }
+}
+
+function generate_image(id, s, r) {
+    var transform = valentine_meta[id]["transform"]
+        .replace("sender", s)
+        .replace("recipient", r);
+
+    img = document.getElementById("card_image");
+    img.src = "https://res.cloudinary.com/dhrwrcog3/image/upload/" + transform + "/" + valentine_meta[id]["cloudinary_filename"]
+
+    if (id == 4) {
+        load_cam()
+    }
 }
 
 function load_text(sender, recipient, id) {

@@ -30,15 +30,15 @@ function show_preview() {
   recipient = document.getElementById("recipient").value;
 
   load_image(selected_id);
-  load_text(sender, recipient, selected_id);
+  // load_text(sender, recipient, selected_id);
 
   ib64 = window.btoa(encodeURI(selected_id));
   sb64 = window.btoa(encodeURI(sender));
   rb64 = window.btoa(encodeURI(recipient));
 
   card_url = document.getElementById("card_url");
-  current_loc = "https://oralgex.com/v/";
-  // current_loc = location.href.replace(/\/[^\/]+$/, "/");
+  // current_loc = "https://oralgex.com/v/";
+  current_loc = location.href.replace(/\/[^\/]+$/, "/");
   receive = current_loc + 'receive.html';
   query_string = '?i=' + ib64 + '&rb=' + rb64 + '&sb=' + sb64;
 
@@ -50,6 +50,13 @@ function show_preview() {
     card_url.value = ""
     document.getElementById("shareButton").style.display = "none"
   }
+}
+
+function updatePreview() {
+  selected_id = document.getElementById("bg_menu").value
+  sender = document.getElementById("sender").value;
+  recipient = document.getElementById("recipient").value;
+  generate_image(selected_id, sender, recipient)
 }
 
 function copyShareLink() {

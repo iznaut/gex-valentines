@@ -1,22 +1,21 @@
 body {
-  margin: 20px;
+  margin: 2em;
 }
 #create {
-  width: 50vw;
-  max-width: 600px;
-}
-#card_image {
-  /* margin: 25px; */
-  width: 80vw;
+  max-width: 40vw;
 }
 #card_container {
   /* border: 2px solid black; */
-  width: 60vw;
+  width: 100%;
   min-height: 50vh;
   margin-top: 5px;
   padding: 7px;
   font-weight: bold;
   position: relative;
+}
+#card_image {
+  margin: 25px;
+  width: 100%;
 }
 footer {
   margin: 15px 0 15px 0;

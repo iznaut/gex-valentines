@@ -5,13 +5,15 @@
         "artist_name": "Alayna Gray",
         "artist_url": "",
         "recipient_style": {
-            "bottom": "135px",
-            "left": "75px"
+            "bottom": "22vh",
+            "left": "4vw"
         },
         "sender_style": {
             "bottom": "80px",
             "left": "170px"
-        }
+        },
+        "cloudinary_filename": "2023-1_dosfzn",
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_south_west,x_270,y_170/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_south_west,x_80,y_270"
     },
     {
         "text": "You can't spell SEX without 2/3rds of GEX!",
@@ -25,7 +27,9 @@
         "sender_style": {
             "top": "400px",
             "left": "200px"
-        }
+        },
+        "cloudinary_filename": "2023-2_hrkbru.jpg",
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_140,y_-160/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_300,y_-50"
     },
     {
         "text": "A little tongue now, a LOT of tail later!",
@@ -39,7 +43,9 @@
         "sender_style": {
             "top": "125px",
             "right": "45px"
-        }
+        },
+        "cloudinary_filename": "2023-3_cgn5r7",
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_north_east,x_270,y_150/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_north_east,x_65,y_270"
     },
     {
         "text": "I'm addicted to watching you, Valentine!",
@@ -53,7 +59,9 @@
         "sender_style": {
             "bottom": "420px",
             "right": "50px"
-        }
+        },
+        "cloudinary_filename": "2023-4_hcl9e8.png",
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_720,y_-120/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_900,y_0"
     },
     {
         "text": "I'm addicted to watching you, Valentine! (webcam version)",
@@ -67,6 +75,8 @@
         "sender_style": {
             "bottom": "420px",
             "right": "50px"
-        }
+        },
+        "cloudinary_filename": "2023-4_cam_mamew1.png",
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_720,y_-120/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_900,y_0"
     }
 ]

@@ -33,9 +33,8 @@ function quick_api() {
       if (/\?/.test(url) == true) {
         if (/\?i=/.test(url) == true) {
           card_obj = get_card_object(url);
-          console.log(card_obj)
-          load_image(card_obj.id);
-          load_text(card_obj.s, card_obj.r, card_obj.id);
+          generate_image(card_obj.id, card_obj.s, card_obj.r);
+          // load_text(card_obj.s, card_obj.r, card_obj.id);
         }
       }
     });  
