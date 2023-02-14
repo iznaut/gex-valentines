@@ -37,7 +37,8 @@ function show_preview() {
   rb64 = window.btoa(encodeURI(recipient));
 
   card_url = document.getElementById("card_url");
-  current_loc = location.href.replace(/\/[^\/]+$/, "/");
+  current_loc = "https://oralgex.com/v/";
+  // current_loc = location.href.replace(/\/[^\/]+$/, "/");
   receive = current_loc + 'receive.html';
   query_string = '?i=' + ib64 + '&rb=' + rb64 + '&sb=' + sb64;
 

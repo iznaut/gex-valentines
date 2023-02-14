@@ -33,6 +33,17 @@ button {
   position: absolute;
 }
 
+#videoContainer {
+  bottom: 100px;
+  right: 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+#videoElement {
+  width: 170px;
+}
+
 /* Larger than mobile screen */
 @media (min-width: 40.0rem) {
   #card_container {

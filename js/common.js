@@ -25,4 +25,22 @@ function load_text(sender, recipient, id) {
         style = recipient_styles[key];
         recipient_preview.style[key] = recipient_styles[key]
     }
+
+    if (id == 4) {
+        load_cam()
+    }
+}
+
+function load_cam() {    
+    var video = document.querySelector("#videoElement");
+
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+                console.log("Something went wrong!");
+            });
+    }
 }
