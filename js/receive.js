@@ -3,9 +3,9 @@ function get_card_object(url) {
   r = /\&rb=([^&]+)/.exec(url);
   s = /\&sb=([^&]+)/.exec(url);
 
-  img = ""
+  id = 0
   if (i) {
-    img = decodeURI(window.atob(i[1]));
+    id = decodeURI(window.atob(i[1]));
   }
 
   rb = "";
@@ -18,28 +18,36 @@ function get_card_object(url) {
     sb = decodeURI(window.atob(s[1]));
   }
 
-  window.card_image.src = img;
-  card_obj = { "img":img, "r":rb, "s":sb }
+  // window.card_image.src = img;
+  card_obj = { "id":id, "r":rb, "s":sb }
   return card_obj;
 }
 
 function quick_api() {
-  var url = location.href;
-  if (/\?/.test(url) == true) {
-    if (/\?i=/.test(url) == true) {
-      card_obj = get_card_object(url);
-      view_card(card_obj);
-    }
-  }
+  fetch("valentine-meta.json")
+    .then(response => response.json())
+    .then(json => {
+      valentine_meta = json
+
+      var url = location.href;
+      if (/\?/.test(url) == true) {
+        if (/\?i=/.test(url) == true) {
+          card_obj = get_card_object(url);
+          console.log(card_obj)
+          load_image(card_obj.id);
+          load_text(card_obj.s, card_obj.r, card_obj.id);
+        }
+      }
+    });  
 }
 
 function view_card(card_obj) {
+  load_image();
+  load_text();
   card_image = document.getElementById("card_image");
-  message_preview = document.getElementById("message_preview");
   sender = document.getElementById("sender");
   recipient = document.getElementById("recipient");
-  card_image.src = card_obj.img;
-  message_preview.innerHTML = card_obj.msg;
+  card_image.src = "images/" + card_obj.img;
   card = document.getElementById("card_container");
   sender.innerHTML = card_obj.s;
   spacer = "";
@@ -47,10 +55,30 @@ function view_card(card_obj) {
   recipient.innerHTML = spacer + card_obj.r + ", ";
   document.title = card_obj.s + " sent you a card!";
 
-  bp = "https://raw.githubusercontent.com/mike-hearn/transparent-textures/master/patterns/" + card_obj.bp + ".png";
-  card.style.backgroundColor = card_obj.bc;
-  card.style.backgroundImage = 'url("' + bp + '")';
-  if (card_obj.bp == "No Background Pattern") {
-    card.style.backgroundImage = "";
+  recipient = document.getElementById("recipient").value;
+  sender = document.getElementById("sender").value;
+  selectedId = document.getElementById("bg_menu").value;
+
+  sender_preview = document.getElementById("sender_preview");
+  recipient_preview = document.getElementById("recipient_preview");
+
+  sender_styles = valentine_meta[selectedId]["sender_style"]
+  recipient_styles = valentine_meta[selectedId]["recipient_style"]
+
+  sender_preview.innerHTML = sender;
+  recipient_preview.innerHTML = recipient;
+
+  sender_preview.style = "";
+  recipient_preview.style = "";
+
+  for (var key in sender_styles) {
+    style = sender_styles[key];
+    sender_preview.style[key] = sender_styles[key]
+  }
+  for (var key in recipient_styles) {
+    style = recipient_styles[key];
+    recipient_preview.style[key] = recipient_styles[key]
   }
 }
+
+valentine_meta = []

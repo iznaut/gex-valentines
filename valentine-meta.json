@@ -1,0 +1,58 @@
+[
+    {
+        "text": "Will you Enter the Gecko, Valentine?",
+        "filename": "2023-1.jpg",
+        "artist_name": "Alayna Gray",
+        "artist_url": "",
+        "recipient_style": {
+            "bottom": "135px",
+            "left": "75px"
+        },
+        "sender_style": {
+            "bottom": "80px",
+            "left": "170px"
+        }
+    },
+    {
+        "text": "You can't spell SEX without 2/3rds of GEX!",
+        "filename": "2023-2.jpg",
+        "artist_name": "Alayna Gray",
+        "artist_url": "",
+        "recipient_style": {
+            "top": "335px",
+            "left": "100px"
+        },
+        "sender_style": {
+            "top": "400px",
+            "left": "200px"
+        }
+    },
+    {
+        "text": "A little tongue now, a LOT of tail later!",
+        "filename": "2023-3.jpg",
+        "artist_name": "Alayna Gray",
+        "artist_url": "",
+        "recipient_style": {
+            "top": "71px",
+            "right": "106px"
+        },
+        "sender_style": {
+            "top": "125px",
+            "right": "45px"
+        }
+    },
+    {
+        "text": "I'm addicted to watching you, Valentine!",
+        "filename": "2023-4.jpg",
+        "artist_name": "Alayna Gray",
+        "artist_url": "",
+        "recipient_style": {
+            "bottom": "477px",
+            "right": "109px"
+        },
+        "sender_style": {
+            "bottom": "420px",
+            "right": "50px"
+        }
+    }
+]
