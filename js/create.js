@@ -43,7 +43,7 @@ function show_preview() {
   card_url = document.getElementById("card_url");
   current_loc = "https://oralgex.com/v_send/";
   // current_loc = location.href.replace(/\/[^\/]+$/, "/");
-  receive = 'https://oralgex.com/v_receive/';
+  receive = 'https://oralgex.com/v-receive/';
   // query_string = '?i=' + ib64 + '&rb=' + rb64 + '&sb=' + sb64;
   query_string = '?id=' + b64;
 
