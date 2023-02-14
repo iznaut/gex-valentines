@@ -36,11 +36,16 @@ function show_preview() {
   sb64 = window.btoa(encodeURI(sender));
   rb64 = window.btoa(encodeURI(recipient));
 
+  card_obj = { "id": selected_id, "r": recipient, "s": sender }
+
+  b64 = window.btoa(encodeURI(JSON.stringify(card_obj)));
+
   card_url = document.getElementById("card_url");
   current_loc = "https://oralgex.com/v_send/";
   // current_loc = location.href.replace(/\/[^\/]+$/, "/");
   receive = 'https://oralgex.com/v_receive/';
-  query_string = '?i=' + ib64 + '&rb=' + rb64 + '&sb=' + sb64;
+  // query_string = '?i=' + ib64 + '&rb=' + rb64 + '&sb=' + sb64;
+  query_string = '?id=' + b64;
 
   if (img != "" && sender != "" && recipient != "") {
     card_url.value = receive + query_string;
@@ -60,6 +65,7 @@ function updatePreview() {
 }
 
 function copyShareLink() {
+  show_preview()
   // Get the text field
   var copyText = document.getElementById("card_url");
 
