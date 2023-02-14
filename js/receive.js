@@ -1,29 +1,11 @@
 function get_card_object(url) {
   i = /\?i=([^&]+)/.exec(url);
-  m = /\&m=([^&]+)/.exec(url);
-  c = /\&bc=([^&]+)/.exec(url);
-  p = /\&bp=([^&]+)/.exec(url);
   r = /\&rb=([^&]+)/.exec(url);
   s = /\&sb=([^&]+)/.exec(url);
 
   img = ""
   if (i) {
     img = decodeURI(window.atob(i[1]));
-  }
-
-  msg = "";
-  if (m) {
-    msg = decodeURI(window.atob(m[1]));
-  }
-
-  bc = "";
-  if (c) {
-    bc = decodeURI(window.atob(c[1]));
-  }
-
-  bp = "";
-  if (p) {
-    bp = decodeURI(window.atob(p[1]));
   }
 
   rb = "";
@@ -37,7 +19,7 @@ function get_card_object(url) {
   }
 
   window.card_image.src = img;
-  card_obj = { "msg":msg, "img":img, "bc":bc, "bp":bp, "r":rb, "s":sb }
+  card_obj = { "img":img, "r":rb, "s":sb }
   return card_obj;
 }
 
