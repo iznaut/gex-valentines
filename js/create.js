@@ -32,9 +32,9 @@ function show_preview() {
   load_image(selected_id);
   // load_text(sender, recipient, selected_id);
 
-  ib64 = window.btoa(encodeURI(selected_id));
-  sb64 = window.btoa(encodeURI(sender));
-  rb64 = window.btoa(encodeURI(recipient));
+  // ib64 = window.btoa(encodeURI(selected_id));
+  // sb64 = window.btoa(encodeURI(sender));
+  // rb64 = window.btoa(encodeURI(recipient));
 
   card_obj = { "id": selected_id, "r": recipient, "s": sender }
 

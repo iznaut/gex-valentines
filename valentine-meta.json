@@ -29,7 +29,7 @@
             "left": "200px"
         },
         "cloudinary_filename": "2023-2_hrkbru.jpg",
-        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_140,y_-160/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_300,y_-50"
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_140,y_-160/co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_300,y_-50"
     },
     {
         "text": "A little tongue now, a LOT of tail later!",
@@ -45,7 +45,7 @@
             "right": "45px"
         },
         "cloudinary_filename": "2023-3_cgn5r7",
-        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_north_east,x_270,y_150/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_north_east,x_65,y_270"
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_north_east,x_270,y_150/co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_north_east,x_65,y_270"
     },
     {
         "text": "I'm addicted to watching you, Valentine!",
@@ -61,7 +61,7 @@
             "right": "50px"
         },
         "cloudinary_filename": "2023-4_hcl9e8.png",
-        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_720,y_-120/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_900,y_0"
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_720,y_-120/co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_900,y_0"
     },
     {
         "text": "I'm addicted to watching you, Valentine! (webcam version)",
@@ -77,6 +77,6 @@
             "right": "50px"
         },
         "cloudinary_filename": "2023-4_cam_mamew1.png",
-        "transform": "co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_720,y_-120/co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_900,y_0"
+        "transform": "co_rgb:000000,l_text:arial_64_normal_left:recipient/fl_layer_apply,g_west,x_720,y_-120/co_rgb:000000,l_text:arial_64_normal_left:sender/fl_layer_apply,g_west,x_900,y_0"
     }
 ]
