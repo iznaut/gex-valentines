@@ -43,12 +43,28 @@ function show_preview() {
   query_string = '?i=' + ib64 + '&rb=' + rb64 + '&sb=' + sb64;
 
   if (img != "" && sender != "" && recipient != "") {
-    recipient = " - Send this to " + recipient + "!"
-    card_url.innerHTML = '<a href="' + receive + query_string + '" target="_blank">Shareable link to your card</a>' + recipient;
+    card_url.value = receive + query_string;
+    document.getElementById("shareButton").style.display = ""
   }
   else {
-    card_url.innerHTML = ""
+    card_url.value = ""
+    document.getElementById("shareButton").style.display = "none"
   }
+}
+
+function copyShareLink() {
+  // Get the text field
+  var copyText = document.getElementById("card_url");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
 }
 
 valentine_meta = []
